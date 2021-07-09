@@ -21,22 +21,23 @@
                         Категории
                     </a>
                     <div class="navbar-dropdown is-boxed" id="categories">
-                        <?php foreach (getAllCategories() as $category):?>
-                        <a class="navbar-item" href="/category/<?= $category['id'] ?>">
-                            <?= $category['title'] ?>
-                        </a>
-                        <?php endforeach;?>
+                        <?php foreach (getAllCategories() as $category): ?>
+                            <a class="navbar-item" href="/category/<?= $category['id'] ?>">
+                                <?= $category['title'] ?>
+                            </a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <div class="field is-grouped">
-                        <?php if(auth()->isLoggedIn()) :?>
-                            <div class="dropdown is-hoverable">
+                    <div class="buttons">
+                        <?php if (auth()->isLoggedIn()) : ?>
+                            <div class="dropdown is-hoverable pr-2">
                                 <div class="dropdown-trigger">
-                                    <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                    <button class="button is-primary" aria-haspopup="true"
+                                            aria-controls="dropdown-menu4">
                                         <span>Управление</span>
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -68,45 +69,46 @@
                                 </div>
                             </div>
 
-                            <div class="account control">
+                            <div class="account control pr-2">
                                 <p>
-                                    Здравствуйте, <b><?= auth()->getUsername()?></b>
+                                    Здравствуйте, <b><?= auth()->getUsername() ?></b>
                                 </p>
                             </div>
-                            <p class="control">
+                            <div class="field is-grouped">
                                 <a class="button is-info" href="/profile/info">
                                   <span class="icon">
                                     <i class="fas fa-user"></i>
                                   </span>
                                     <span>Профиль</span>
                                 </a>
-                            </p>
-                            <p class="control">
+
+
                                 <a class="button is-dark" href="/logout">
                                   <span class="icon">
                                     <i class="fas fa-window-close"></i>
                                   </span>
                                     <span>Выйти</span>
                                 </a>
-                            </p>
+                            </div>
+
                         <?php else: ?>
-                            <p class="control">
-                                <a class="button is-link" href="/login">
+
+                            <a class="button is-link" href="/login">
                                       <span class="icon">
                                         <i class="fas fa-user"></i>
                                       </span>
-                                    <span>Войти</span>
-                                </a>
-                            </p>
-                            <p class="control">
-                                <a class="button is-primary" href="/register">
+                                <span>Войти</span>
+                            </a>
+
+
+                            <a class="button is-primary" href="/register">
                               <span class="icon">
                                 <i class="fas fa-address-book"></i>
                               </span>
-                                    <span>Зарегистрироваться</span>
-                                </a>
-                            </p>
-                        <?php endif;?>
+                                <span>Регистрация</span>
+                            </a>
+
+                        <?php endif; ?>
 
                     </div>
                 </div>

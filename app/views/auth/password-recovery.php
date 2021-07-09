@@ -12,10 +12,9 @@
         </div>
     </div>
 </section>
-<div class="container main-content">
-    <div class="columns">
-        <div class="column"></div>
-        <div class="column is-quarter auth-form">
+<section class="section main-content">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
             <?= flash(); ?>
             <form action="/password-recovery" method="post">
                 <div class="field">
@@ -43,6 +42,5 @@
                 </div>
             </form>
         </div>
-        <div class="column"></div>
     </div>
-</div>
+</section>

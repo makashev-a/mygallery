@@ -14,10 +14,10 @@
         </div>
     </section>
 
-    <div class="container main-content">
-        <div class="columns">
-            <div class="column"></div>
-            <div class="column is-half auth-form">
+    <section class="section main-content">
+        <div class="columns is-mobile is-centered">
+
+            <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-16by9">
@@ -31,15 +31,15 @@
                                     <img class="is-rounded" id="avatar" src="<?= getImage($user['image']);?>" alt="Placeholder image">
                                 </figure>
                             </div>
-                            <p class="title is-4">
+                            <p class="title is-4 is-size-5-mobile">
                                 Добавил: <a href="/user/<?= $user['id'];?>"><?= $user['username'];?></a>
                             </p>
                         </div>
 
-                        <div class="content">
+                        <div class="content is-size-6-mobile">
                             <?= $photo['description'];?>
                             <br>
-                            <time datetime="2016-1-1" class="is-size-6 is-pulled-left">Добавлено: <?= uploadedDate($photo['date']);?></time>
+                            <time datetime="2016-1-1" class="is-size-6 is-size-7-mobile is-pulled-left">Добавлено: <?= uploadedDate($photo['date']);?></time>
                             <a href="/photos/<?= $photo['id'];?>/download" class="button is-info is-pulled-right">Скачать</a>
                             <div class="is-clearfix"></div>
                         </div>
@@ -47,7 +47,6 @@
                 </div>
 
             </div>
-            <div class="column"></div>
         </div>
 
         <hr>
@@ -85,4 +84,4 @@
         <?php endforeach;?>
 
         </div>
-    </div>
+    </section>

@@ -12,10 +12,9 @@
         </div>
     </div>
 </section>
-<div class="container main-content">
-    <div class="columns">
-        <div class="column"></div>
-        <div class="column is-quarter auth-form">
+<section class="section main-content">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
             <?php echo flash(); ?>
             <form action="/register" method="POST">
                 <div class="field">
@@ -84,6 +83,5 @@
                 <p>Уже зарегистрированы? <b><a href="/login">Войти</a></b></p>
             </div>
         </div>
-        <div class="column"></div>
     </div>
-</div>
+</section>

@@ -25,7 +25,6 @@ time {
 .account {
     display: flex;
     align-items: center;
-    margin-left: 10px;
 }
 
 .account p {
@@ -67,3 +66,23 @@ time {
     position: static;
 }
 
+@media (max-width: 385px) {
+    .card .media:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .media {
+        flex-wrap: wrap;
+    }
+
+    .media-right {
+        margin-top: 5px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 336px) {
+    .account {
+        margin-bottom: 10px;
+    }
+}

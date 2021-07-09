@@ -1,6 +1,6 @@
 <?php $this->layout('layout', ['title' => "Безопасность"]) ?>
 
-    <div class="container main-content">
+    <section class="section main-content">
 
         <div class="columns">
             <div class="column">
@@ -54,4 +54,4 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
